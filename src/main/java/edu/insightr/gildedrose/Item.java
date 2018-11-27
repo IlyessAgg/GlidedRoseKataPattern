@@ -1,11 +1,11 @@
 package edu.insightr.gildedrose;
 
-public class Item {
+public abstract class Item implements IVisitable {
 
-    private String name;
-    private int sellIn;
+    protected String name;
+    protected int sellIn;
 
-    private int quality;
+    protected int quality;
 
     public Item(String name, int sellIn, int quality) {
         super();
@@ -37,6 +37,8 @@ public class Item {
     public void setQuality(int quality) {
         this.quality = quality;
     }
+
+    public void accept(IVisitor v){ v.visit(this);}
 
     @Override
     public String toString() {
