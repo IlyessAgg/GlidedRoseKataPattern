@@ -1,0 +1,2 @@
+# GlidedRoseKataPattern
+Update Quality.
