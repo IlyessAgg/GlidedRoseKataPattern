@@ -9,6 +9,15 @@ public class Inventory {
         this.items = items;
     }
 
+    public UpdateStrategy[] ListStrategies = new UpdateStrategy[]{
+                                             new StrategyBrie(),
+                                             new StrategyCake(),
+                                             new StrategyElixir(),
+                                             new StrategyPasses(),
+                                             new StrategySulfuras(),
+                                             new StrategyVest()
+    };
+
     public Inventory() {
         super();
         items = new Item[]{
@@ -32,6 +41,7 @@ public class Inventory {
     }
 
     public void updateQuality() {
+        /*
         for (int i = 0; i < items.length; i++) {
             if (items[i].getName() != "Aged Brie"
                     && items[i].getName() != "Backstage passes to a TAFKAL80ETC concert") {
@@ -81,6 +91,15 @@ public class Inventory {
                     }
                 }
             }
+        }
+        */
+        for(Item i : items){
+            if(i.getName().contains("Aged Brie")) ListStrategies[0].update(i);
+            else if(i.getName().contains("Cake")) ListStrategies[1].update(i);
+            else if(i.getName().contains("Elixir")) ListStrategies[2].update(i);
+            else if(i.getName().contains("passes")) ListStrategies[3].update(i);
+            else if(i.getName().contains("Sulfuras")) ListStrategies[4].update(i);
+            else if(i.getName().contains("Vest")) ListStrategies[5].update(i);
         }
     }
 
