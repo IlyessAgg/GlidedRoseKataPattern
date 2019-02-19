@@ -1,6 +1,8 @@
 # GildedRoseJavaKata
 The Gilded Rose Kata in Java
 
+# Task
+Implement changes using different design patterns : strategy and visitor (one branch for each).
 
 # Original Description of the Gilded Rose
 
@@ -49,6 +51,3 @@ you). Your work needs to be completed by Friday, February 18, 2011
 Just for clarification, an item can never have its Quality increase
 above 50, however "Sulfuras" is a legendary item and as such its
 Quality is 80 and it never alters.
-
-# Task
-My task is to implement these changes using different Design Patterns : strategy and visitor.
